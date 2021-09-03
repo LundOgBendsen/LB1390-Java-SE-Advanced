@@ -24,9 +24,9 @@ public class ThreadNode implements TreeNode
   }
 
   @Override
-  public Enumeration<?> children()
+  public Enumeration<? extends TreeNode> children()
   {
-    return new Enumeration<Object>()
+    return new Enumeration<TreeNode>()
     {
       @Override
       public boolean hasMoreElements()
@@ -35,7 +35,7 @@ public class ThreadNode implements TreeNode
       }
 
       @Override
-      public Object nextElement()
+      public TreeNode nextElement()
       {
         return null;
       }

@@ -615,9 +615,9 @@ class ThreadGroupNode implements TreeNode
   }
 
   @Override
-  public Enumeration<?> children()
+  public Enumeration<? extends TreeNode> children()
   {
-    return new Enumeration<Object>()
+    return new Enumeration<TreeNode>()
     {
       TreeNode[] children = this.children.clone();
       int pointer = -1;
@@ -629,7 +629,7 @@ class ThreadGroupNode implements TreeNode
       }
 
       @Override
-      public Object nextElement()
+      public TreeNode nextElement()
       {
         return children[++pointer];
       }
@@ -666,9 +666,9 @@ class ThreadNode implements TreeNode
   }
 
   @Override
-  public Enumeration<?> children()
+  public Enumeration<? extends TreeNode> children()
   {
-    return new Enumeration<Object>()
+    return new Enumeration<TreeNode>()
     {
       @Override
       public boolean hasMoreElements()
@@ -677,7 +677,7 @@ class ThreadNode implements TreeNode
       }
 
       @Override
-      public Object nextElement()
+      public TreeNode nextElement()
       {
         return null;
       }
