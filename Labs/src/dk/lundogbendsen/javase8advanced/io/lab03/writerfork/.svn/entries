@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2"
+   name=""
+   committed-date="2005-05-10T18:35:20.750536Z"
+   url="http://svn.lundogbendsen.dk/kursusmaterialer/Kursusmoduler/Java%20-%20IO%20Streams/Labs/Solutions/src/writerfork"
+   last-author="rasmus"
+   kind="dir"
+   revision="133"/>
+<entry
+   committed-rev="2"
+   name="WriterFork.java"
+   text-time="2004-09-11T23:09:28.000000Z"
+   committed-date="2005-05-10T18:35:20.750536Z"
+   checksum="9c94427ac8ac6b480cdcbf4b70190597"
+   last-author="rasmus"
+   kind="file"/>
+<entry
+   committed-rev="2"
+   name="WriterForkTest.java"
+   text-time="2004-09-11T23:10:14.000000Z"
+   committed-date="2005-05-10T18:35:20.750536Z"
+   checksum="11f0b4a7e7c45b1b78f7715d666fde4b"
+   last-author="rasmus"
+   kind="file"/>
+</wc-entries>

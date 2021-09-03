@@ -1,0 +1,46 @@
+package writerfork;
+
+import java.io.IOException;
+import java.io.Writer;
+
+public class WriterFork extends Writer{
+
+	private Writer w1;
+	private Writer w2;
+
+	public WriterFork(Writer w1, Writer w2) {
+		this.w1 = w1;
+		this.w2 = w2;
+	}
+		
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.io.Writer#write(char[], int, int)
+	 */
+	public void write(char[] cbuf, int off, int len) throws IOException {
+		this.w1.write(cbuf, off, len);
+		this.w2.write(cbuf, off, len);
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.io.Writer#flush()
+	 */
+	public void flush() throws IOException {
+		this.w1.flush();
+		this.w2.flush();
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.io.Writer#close()
+	 */
+	public void close() throws IOException {
+		this.w1.close();
+		this.w2.close();
+	}
+
+}

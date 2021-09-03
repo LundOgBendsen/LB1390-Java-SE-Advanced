@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="2"
+   name=""
+   committed-date="2005-05-10T18:35:20.750536Z"
+   url="http://svn.lundogbendsen.dk/kursusmaterialer/Kursusmoduler/Java%20-%20IO%20Streams/Labs/Solutions/src/savingpersons"
+   last-author="rasmus"
+   kind="dir"
+   revision="133"/>
+<entry
+   committed-rev="2"
+   name="Person.java"
+   text-time="2004-09-11T22:20:50.000000Z"
+   committed-date="2005-05-10T18:35:20.750536Z"
+   checksum="17e63d3f5d12db70efb7b152f5e2517b"
+   last-author="rasmus"
+   kind="file"/>
+<entry
+   committed-rev="2"
+   name="TestPerson.java"
+   text-time="2004-09-11T22:19:50.000000Z"
+   committed-date="2005-05-10T18:35:20.750536Z"
+   checksum="ae07a686e6e6992c2454d645518e4fe5"
+   last-author="rasmus"
+   kind="file"/>
+</wc-entries>
