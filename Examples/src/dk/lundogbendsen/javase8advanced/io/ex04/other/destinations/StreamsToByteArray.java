@@ -16,6 +16,7 @@ public class StreamsToByteArray
     dos.writeInt(12);
 
     byte[] byteArray = baos.toByteArray();
+    System.out.println("Number of bytes in the array: "+byteArray.length);
 
     // INPUT FROM byte[ ]
     ByteArrayInputStream bais = new ByteArrayInputStream(byteArray);
