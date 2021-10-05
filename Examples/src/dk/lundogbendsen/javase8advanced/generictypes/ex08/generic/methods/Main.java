@@ -28,15 +28,15 @@ public class Main
 
   // Bemærk at vi her har en metode, der returnerer en double, men som
   // endvidere definerer typen N (som værende en subtype af Number).
-  public static <N extends Number> double max(N first, N second)
+  public static <N extends Number> N max(N first, N second)
   {
     if (first.doubleValue() > second.doubleValue())
     {
-      return first.doubleValue();
+      return first;
     }
     else
     {
-      return second.doubleValue();
+      return second;
     }
   }
 
