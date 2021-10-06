@@ -3,13 +3,11 @@ package dk.lundogbendsen.javase8advanced.designpatterns.lab01.observer.nongeneri
 import junit.framework.Test;
 import junit.framework.TestSuite;
 
-public class AllTests
-{
-  public static Test suite()
-  {
-    TestSuite suite = new TestSuite("Test for dk.lundogbendsen.dp.exercises.solution.observablelist");
-    suite.addTest(new TestSuite(ObservableListTest.class));
-    suite.addTest(new TestSuite(ObservableListFactoryTest.class));
-    return suite;
-  }
+public class AllTests {
+	public static Test suite() {
+		TestSuite suite = new TestSuite("Test for dk.lundogbendsen.dp.exercises.solution.observablelist");
+		suite.addTest(new TestSuite(ObservableListTest.class));
+		suite.addTest(new TestSuite(ObservableListFactoryTest.class));
+		return suite;
+	}
 }

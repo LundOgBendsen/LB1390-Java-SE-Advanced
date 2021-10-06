@@ -7,9 +7,8 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ ElementType.FIELD, ElementType.TYPE })
-public @interface Xml
-{
-  String name() default "";
+public @interface Xml {
+	String name() default "";
 
-  String nullSubstitution() default "";
+	String nullSubstitution() default "";
 }

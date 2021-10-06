@@ -1,70 +1,68 @@
 package dk.lundogbendsen.javase8advanced.polymorphism.lab02.polymorphism.and.types;
 
-public class TestPolymorphism
-{
+public class TestPolymorphism {
 
-  public static void main(final String[] args)
-  {
-    ////////////////////////////////////
-    //(a) Udskriver c( ) i E
+	public static void main(final String[] args) {
+		////////////////////////////////////
+		// (a) Udskriver c( ) i E
 
-    // E x = new E();
-    // x.c();
+		// E x = new E();
+		// x.c();
 
-    ////////////////////////////////////
-    //(b) Kompilefejl. F er ikke subtype af A.
+		////////////////////////////////////
+		// (b) Kompilefejl. F er ikke subtype af A.
 
-    // A x = new F();
-    // x.a();
+		// A x = new F();
+		// x.a();
 
-    ////////////////////////////////////
-    //(c) Udskriver 3.14 (omend ikke pæn kode).
+		////////////////////////////////////
+		// (c) Udskriver 3.14 (omend ikke pæn kode).
 
-    // F x = new F();
-    // System.out.println(x.PI);
+		// F x = new F();
+		// System.out.println(x.PI);
 
-    ////////////////////////////////////
-    //(d) Kompilefejl. Referencetypen D kender ikke PI.
+		////////////////////////////////////
+		// (d) Kompilefejl. Referencetypen D kender ikke PI.
 
-    // D x = new E();
-    // System.out.println(x.PI);
+		// D x = new E();
+		// System.out.println(x.PI);
 
-    ////////////////////////////////////
-    //(e) Køretids-fejl. En E-instans kan ikke castes til F.
+		////////////////////////////////////
+		// (e) Køretids-fejl. En E-instans kan ikke castes til F.
 
-    // B x = new E();
-    // F y = (F) x;
-    // y.a();
+		// B x = new E();
+		// F y = (F) x;
+		// y.a();
 
-    ////////////////////////////////////
-    //(f) Udskriver: c( ) i E
+		////////////////////////////////////
+		// (f) Udskriver: c( ) i E
 
-    // B x = new E();
-    // D y = (D) x;
-    // y.c();
+		// B x = new E();
+		// D y = (D) x;
+		// y.c();
 
-    ////////////////////////////////////
-    //(g) Udskriver: c( ) i D
+		////////////////////////////////////
+		// (g) Udskriver: c( ) i D
 
-    // C x = new D();
-    // x.c();
+		// C x = new D();
+		// x.c();
 
-    ////////////////////////////////////
-    //(h) Kompilefejl. C er abstrakt, og kan derfor ikke instantieres.
+		////////////////////////////////////
+		// (h) Kompilefejl. C er abstrakt, og kan derfor ikke instantieres.
 
-    // A x = new C();
-    // x.a();
+		// A x = new C();
+		// x.a();
 
-    ////////////////////////////////////
-    //(i) Kompilefejl. Object kender ikke metoden c.
+		////////////////////////////////////
+		// (i) Kompilefejl. Object kender ikke metoden c.
 
-    // Object x = new D();
-    // x.c();
+		// Object x = new D();
+		// x.c();
 
-    ////////////////////////////////////
-    //(j) Udskriver: a( ) i C
+		////////////////////////////////////
+		// (j) Udskriver: a( ) i C
 
-    // D x = new D();
-    // x.a();
-  }
+		// D x = new D();
+		// x.a();
+	}
 }

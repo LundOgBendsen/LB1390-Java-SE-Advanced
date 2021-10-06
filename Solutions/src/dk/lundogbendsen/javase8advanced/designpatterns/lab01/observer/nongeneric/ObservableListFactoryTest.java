@@ -9,27 +9,25 @@ import java.util.List;
 
 import org.junit.Test;
 
-public class ObservableListFactoryTest
-{
-  @Test
-  public void testGet()
-  {
-    ArrayList<String> al01 = new ArrayList<>();
+public class ObservableListFactoryTest {
+	@Test
+	public void testGet() {
+		ArrayList<String> al01 = new ArrayList<>();
 
-    List<String> ol01 = ObservableListFactory.getInstanceTheProxyWay(al01);
-    assertNotNull(ol01);
-    List<String> ol02 = ObservableListFactory.getInstanceTheProxyWay(al01);
-    assertSame(ol01, ol02);
+		List<String> ol01 = ObservableListFactory.getInstanceTheProxyWay(al01);
+		assertNotNull(ol01);
+		List<String> ol02 = ObservableListFactory.getInstanceTheProxyWay(al01);
+		assertSame(ol01, ol02);
 
-    List<Integer> al02 = new LinkedList<Integer>();
+		List<Integer> al02 = new LinkedList<Integer>();
 
-    List<Integer> ol03 = ObservableListFactory.getInstanceTheProxyWay(al02);
-    assertNotNull(ol03);
+		List<Integer> ol03 = ObservableListFactory.getInstanceTheProxyWay(al02);
+		assertNotNull(ol03);
 
-    List<Integer> ol04 = ObservableListFactory.getInstanceTheDecoratorWay(al02);
-    assertNotNull(ol04);
-    List<String> ol05 = ObservableListFactory.getInstanceTheDecoratorWay(al01);
-    assertSame(ol04, ol05);
+		List<Integer> ol04 = ObservableListFactory.getInstanceTheDecoratorWay(al02);
+		assertNotNull(ol04);
+		List<String> ol05 = ObservableListFactory.getInstanceTheDecoratorWay(al01);
+		assertSame(ol04, ol05);
 
-  }
+	}
 }
