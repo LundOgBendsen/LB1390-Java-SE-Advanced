@@ -16,34 +16,31 @@ import java.io.InputStream;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
-public class LoggingEx01
-{
+public class LoggingEx01 {
 
-  private static Logger logger = Logger.getAnonymousLogger();
+	private static Logger logger = Logger.getAnonymousLogger();
 
-  public static void main(final String[] args) throws Exception
-  {
+	public static void main(final String[] args) throws Exception {
 
-    initLoggingSystem();
+		initLoggingSystem();
 
-    logger.info("Entering main-method");
+		logger.info("Entering main-method");
 
-    logger.info("About to print the result of 2 + 2");
-    System.out.println(2 + 2);
-    logger.info("Finished printing the result of 2 + 2");
+		logger.info("About to print the result of 2 + 2");
+		System.out.println(2 + 2);
+		logger.info("Finished printing the result of 2 + 2");
 
-    logger.info("About to sleep 2 seconds");
-    Thread.sleep(2000);
-    logger.info("Woke up");
+		logger.info("About to sleep 2 seconds");
+		Thread.sleep(2000);
+		logger.info("Woke up");
 
-    logger.info("Exiting main-method");
-  }
+		logger.info("Exiting main-method");
+	}
 
-  private static void initLoggingSystem() throws Exception
-  {
-    String fileName = "logging.properties";
-    File loggingSystemConfigFile = new File(fileName);
-    InputStream is = new FileInputStream(loggingSystemConfigFile);
-    LogManager.getLogManager().readConfiguration(is);
-  }
+	private static void initLoggingSystem() throws Exception {
+		String fileName = "logging.properties";
+		File loggingSystemConfigFile = new File(fileName);
+		InputStream is = new FileInputStream(loggingSystemConfigFile);
+		LogManager.getLogManager().readConfiguration(is);
+	}
 }

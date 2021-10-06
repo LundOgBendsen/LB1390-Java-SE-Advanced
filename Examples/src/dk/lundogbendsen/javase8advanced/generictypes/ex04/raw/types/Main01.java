@@ -9,31 +9,28 @@ package dk.lundogbendsen.javase8advanced.generictypes.ex04.raw.types;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main01
-{
+public class Main01 {
 
-  public static void main(final String[] args)
-  {
+	public static void main(final String[] args) {
 
-    ArrayList<String> words = new ArrayList<String>();
+		ArrayList<String> words = new ArrayList<String>();
 
-    words.add("Hej"); // OK
-    // Ulovligt - fanges af kompileren
-    // words.add(new Integer(12));
+		words.add("Hej"); // OK
+		// Ulovligt - fanges af kompileren
+		// words.add(new Integer(12));
 
-    // Vi mister kompilerchecket på, at der kun puttes Strings i vores
-    // ArrayList, når vi bruger ArrayList som en raw type
-    oldMethod(words);
+		// Vi mister kompilerchecket på, at der kun puttes Strings i vores
+		// ArrayList, når vi bruger ArrayList som en raw type
+		oldMethod(words);
 
-    String word0 = words.get(0);
-    System.out.println(word0);
+		String word0 = words.get(0);
+		System.out.println(word0);
 
-    String word1 = words.get(1); // giver ClassCastException
-    System.out.println(word1);
-  }
+		String word1 = words.get(1); // giver ClassCastException
+		System.out.println(word1);
+	}
 
-  public static void oldMethod(final List list)
-  {
-    list.add(new Integer(12)); // her er der ingen problemer!!!
-  }
+	public static void oldMethod(final List list) {
+		list.add(new Integer(12)); // her er der ingen problemer!!!
+	}
 }

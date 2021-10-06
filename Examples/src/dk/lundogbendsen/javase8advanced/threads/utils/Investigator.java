@@ -11,15 +11,12 @@ package dk.lundogbendsen.javase8advanced.threads.utils;
  * Investigator acts as single point of entry to the ThreadInvestigator, only
  * giving access to one Thread at a time
  */
-public class Investigator
-{
-  synchronized static void makeSnapshot(final String name)
-  {
-    Model.getModel().makeSnapshot(name);
-  }
+public class Investigator {
+	synchronized static void makeSnapshot(final String name) {
+		Model.getModel().makeSnapshot(name);
+	}
 
-  synchronized static void show()
-  {
-    View.getView();
-  }
+	synchronized static void show() {
+		View.getView();
+	}
 }

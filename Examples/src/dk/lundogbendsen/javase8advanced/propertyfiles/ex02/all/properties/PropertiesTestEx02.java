@@ -6,18 +6,15 @@ package dk.lundogbendsen.javase8advanced.propertyfiles.ex02.all.properties;
 import java.util.Properties;
 import java.util.Set;
 
-public class PropertiesTestEx02
-{
-  public static void main(String[] args)
-  {
-    Properties systemProps = System.getProperties();
+public class PropertiesTestEx02 {
+	public static void main(String[] args) {
+		Properties systemProps = System.getProperties();
 
-    Set<String> nameSet = systemProps.stringPropertyNames();
+		Set<String> nameSet = systemProps.stringPropertyNames();
 
-    for (String name : nameSet)
-    {
-      String value = systemProps.getProperty(name);
-      System.out.println("[" + name + "=" + value + "]");
-    }
-  }
+		for (String name : nameSet) {
+			String value = systemProps.getProperty(name);
+			System.out.println("[" + name + "=" + value + "]");
+		}
+	}
 }

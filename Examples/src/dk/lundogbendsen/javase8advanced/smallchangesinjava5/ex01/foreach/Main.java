@@ -25,53 +25,48 @@ package dk.lundogbendsen.javase8advanced.smallchangesinjava5.ex01.foreach;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class Main
-{
+public class Main {
 
-  public static void main(final String[] args)
-  {
+	public static void main(final String[] args) {
 
-    // *********************************************************************
-    // * Iterer over array
-    // *********************************************************************
+		// *********************************************************************
+		// * Iterer over array
+		// *********************************************************************
 
-    int[] intArray = new int[] { 2, 4, 6, 8, 10 };
+		int[] intArray = new int[] { 2, 4, 6, 8, 10 };
 
-    System.out.print("Iterate intArray: ");
-    for (int currentInt : intArray)
-    {
-      System.out.print(currentInt + " ");
-    }
-    System.out.println();
+		System.out.print("Iterate intArray: ");
+		for (int currentInt : intArray) {
+			System.out.print(currentInt + " ");
+		}
+		System.out.println();
 
-    // *********************************************************************
-    // * Iterer over collection
-    // *********************************************************************
+		// *********************************************************************
+		// * Iterer over collection
+		// *********************************************************************
 
-    Collection<String> collection = new ArrayList<>();
-    collection.add("hej");
-    collection.add("med");
-    collection.add("dig");
+		Collection<String> collection = new ArrayList<>();
+		collection.add("hej");
+		collection.add("med");
+		collection.add("dig");
 
-    System.out.print("Iterate collection: ");
+		System.out.print("Iterate collection: ");
 
-    for (String o : collection)
-    {
-      System.out.print(o + " ");
-    }
-    System.out.println();
+		for (String o : collection) {
+			System.out.print(o + " ");
+		}
+		System.out.println();
 
-    // *********************************************************************
-    // * Iterer over egen Iterable type
-    // *********************************************************************
+		// *********************************************************************
+		// * Iterer over egen Iterable type
+		// *********************************************************************
 
-    RandomNumberGenerator iterable = new RandomNumberGenerator(6);
+		RandomNumberGenerator iterable = new RandomNumberGenerator(6);
 
-    System.out.print("Iterate iteratable: ");
-    for (int o : iterable)
-    {
-      System.out.print(o + " ");
-    }
-    System.out.println();
-  }
+		System.out.print("Iterate iteratable: ");
+		for (int o : iterable) {
+			System.out.print(o + " ");
+		}
+		System.out.println();
+	}
 }

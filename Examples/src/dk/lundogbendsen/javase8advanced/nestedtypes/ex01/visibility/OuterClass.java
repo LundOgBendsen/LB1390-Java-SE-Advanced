@@ -1,27 +1,22 @@
 package dk.lundogbendsen.javase8advanced.nestedtypes.ex01.visibility;
 
-public class OuterClass
-{
-  private static String privateString = "Hello world from OuterClass";
+public class OuterClass {
+	private static String privateString = "Hello world from OuterClass";
 
-  public static String readPrivateField(NestedClass nestedClass)
-  {
-    return nestedClass.privateText;
-  }
+	public static String readPrivateField(NestedClass nestedClass) {
+		return nestedClass.privateText;
+	}
 
-  public static class NestedClass
-  {
-    private String privateText = "Hello world from NestedClass";
+	public static class NestedClass {
+		private String privateText = "Hello world from NestedClass";
 
-    @Override
-    public String toString()
-    {
-      return OuterClass.privateString;
-    }
+		@Override
+		public String toString() {
+			return OuterClass.privateString;
+		}
 
-    public static String readPrivateField()
-    {
-      return OuterClass.privateString;
-    }
-  }
+		public static String readPrivateField() {
+			return OuterClass.privateString;
+		}
+	}
 }

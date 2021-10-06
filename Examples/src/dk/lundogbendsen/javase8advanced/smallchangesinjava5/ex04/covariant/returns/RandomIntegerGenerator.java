@@ -2,14 +2,12 @@ package dk.lundogbendsen.javase8advanced.smallchangesinjava5.ex04.covariant.retu
 
 import java.util.Random;
 
-public class RandomIntegerGenerator implements RandomObjectGenerator
-{
+public class RandomIntegerGenerator implements RandomObjectGenerator {
 
-  private static Random random = new Random();
+	private static Random random = new Random();
 
-  @Override
-  public Integer generateRandomObject()
-  {
-    return random.nextInt();
-  }
+	@Override
+	public Integer generateRandomObject() {
+		return random.nextInt();
+	}
 }

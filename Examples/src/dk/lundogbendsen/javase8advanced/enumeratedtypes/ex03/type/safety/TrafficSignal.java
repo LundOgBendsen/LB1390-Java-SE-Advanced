@@ -20,9 +20,6 @@ package dk.lundogbendsen.javase8advanced.enumeratedtypes.ex03.type.safety;
  * 
  * Enums er automatisk final (dvs. man ikke kan lave subtyper af en enum).
  */
-public enum TrafficSignal
-{
-  RED,
-  YELLOW,
-  GREEN;
+public enum TrafficSignal {
+	RED, YELLOW, GREEN;
 }

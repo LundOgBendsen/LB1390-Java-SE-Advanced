@@ -9,31 +9,26 @@ import java.util.Random;
  * Måske er det lige midt i at en tråd er ved at ændre på
  * et objekts tilstand, så tilstanden efterlades ugyldig!!!
  */
-public class AlternativeToDeprecatedStopMethod
-{
-  public static void main(final String[] args)
-  {
-    Random ran = new Random();
+public class AlternativeToDeprecatedStopMethod {
+	public static void main(final String[] args) {
+		Random ran = new Random();
 
-    int[] counter = new int[2];
+		int[] counter = new int[2];
 
-    for (int n = 0; n < 100; n++)
-    {
-      StopSafeThread thread = new StopSafeThread(counter);
-      thread.start();
-      try
-      {
-        int w = ran.nextInt(30)-20;
-        if (w > 0) Thread.sleep(w);
-      }
-      catch (InterruptedException e)
-      {
-      }
-      Thread.yield();
-      thread.makeSafeStop();
-      System.out.println("n = " + n);
-    }
+		for (int n = 0; n < 100; n++) {
+			StopSafeThread thread = new StopSafeThread(counter);
+			thread.start();
+			try {
+				int w = ran.nextInt(30) - 20;
+				if (w > 0)
+					Thread.sleep(w);
+			} catch (InterruptedException e) {
+			}
+			Thread.yield();
+			thread.makeSafeStop();
+			System.out.println("n = " + n);
+		}
 
-    System.out.println("counter: " + counter[0] + " " + counter[1]);
-  }
+		System.out.println("counter: " + counter[0] + " " + counter[1]);
+	}
 }

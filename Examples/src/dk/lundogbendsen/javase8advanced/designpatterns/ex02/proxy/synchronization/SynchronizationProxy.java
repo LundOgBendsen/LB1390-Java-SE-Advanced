@@ -4,17 +4,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class SynchronizationProxy
-{
+public class SynchronizationProxy {
 
-  @SuppressWarnings({ "unused" })
-  public static void main(String[] args)
-  {
+	@SuppressWarnings({ "unused" })
+	public static void main(String[] args) {
 
-    // not synchronized
-    ArrayList<String> list = new ArrayList<>();
+		// not synchronized
+		ArrayList<String> list = new ArrayList<>();
 
-    // synchronized
-    List<String> syncList = Collections.synchronizedList(list);
-  }
+		// synchronized
+		List<String> syncList = Collections.synchronizedList(list);
+	}
 }

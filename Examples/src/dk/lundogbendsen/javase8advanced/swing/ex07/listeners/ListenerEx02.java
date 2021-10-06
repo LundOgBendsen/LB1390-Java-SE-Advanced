@@ -10,21 +10,21 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-public class ListenerEx02{
+public class ListenerEx02 {
 
-	public static void main( final String[ ] args ) throws Exception{
+	public static void main(final String[] args) throws Exception {
 
 		// Vi laver en event-listener - Java 8 style
-		ActionListener eventListener = e -> System.out.println( "Consumer received event" );
+		ActionListener eventListener = e -> System.out.println("Consumer received event");
 
 		// Så laver vi en event-producer...
-		JButton eventProducer = new JButton( "Produce event" );
+		JButton eventProducer = new JButton("Produce event");
 		// ... og registrerer vores event-listener hos den
-		eventProducer.addActionListener( eventListener );
+		eventProducer.addActionListener(eventListener);
 
-		JFrame frame = new JFrame( "Event-programming test" );
-		frame.add( eventProducer );
-		frame.setSize( new Dimension( 200, 200 ) );
-		frame.setVisible( true );
+		JFrame frame = new JFrame("Event-programming test");
+		frame.add(eventProducer);
+		frame.setSize(new Dimension(200, 200));
+		frame.setVisible(true);
 	}
 }

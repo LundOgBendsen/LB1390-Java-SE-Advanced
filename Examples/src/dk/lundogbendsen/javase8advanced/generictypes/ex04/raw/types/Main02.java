@@ -8,34 +8,31 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Vector;
 
-public class Main02
-{
+public class Main02 {
 
-  public static void main(String[] args)
-  {
-    Vector<String> words = new Vector<String>();
+	public static void main(String[] args) {
+		Vector<String> words = new Vector<String>();
 
-    words.add("Hej"); // OK
-    // Ulovligt - fanges af kompileren
-    // words.add(new Integer(12));
+		words.add("Hej"); // OK
+		// Ulovligt - fanges af kompileren
+		// words.add(new Integer(12));
 
-    // Vi mister kompilerchecket på, at der kun puttes Strings i vores
-    // Vector, når vi bruger Vector som en raw type. Derfor wrapper vi 
-    // den i en List-proxy, der under kørsel checker, at der kun puttes
-    // de rigtige ting i Vector'en.
-    List list = Collections.checkedList(words, String.class);
+		// Vi mister kompilerchecket på, at der kun puttes Strings i vores
+		// Vector, når vi bruger Vector som en raw type. Derfor wrapper vi
+		// den i en List-proxy, der under kørsel checker, at der kun puttes
+		// de rigtige ting i Vector'en.
+		List list = Collections.checkedList(words, String.class);
 
-    oldMethod(list);
+		oldMethod(list);
 
-    String word0 = words.get(0);
-    System.out.println(word0);
+		String word0 = words.get(0);
+		System.out.println(word0);
 
-    String word1 = words.get(1); // giver ClassCastException
-    System.out.println(word1);
-  }
+		String word1 = words.get(1); // giver ClassCastException
+		System.out.println(word1);
+	}
 
-  public static void oldMethod(List<Object> list)
-  {
-    list.add(new Integer(12)); // her får vi ClassCastException
-  }
+	public static void oldMethod(List<Object> list) {
+		list.add(new Integer(12)); // her får vi ClassCastException
+	}
 }

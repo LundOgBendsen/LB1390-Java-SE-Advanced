@@ -19,13 +19,11 @@ import static java.lang.Math.ceil;
 // Import af out-variablen fra System-klassen.
 import static java.lang.System.out;
 
-public class Main
-{
+public class Main {
 
-  public static void main(final String[] args)
-  {
-    int int01 = (int) ceil(PI); // ...og ikke Math.ceil(Math.PI);
+	public static void main(final String[] args) {
+		int int01 = (int) ceil(PI); // ...og ikke Math.ceil(Math.PI);
 
-    out.println(int01); // ...og ikke System.out.println(int01)
-  }
+		out.println(int01); // ...og ikke System.out.println(int01)
+	}
 }

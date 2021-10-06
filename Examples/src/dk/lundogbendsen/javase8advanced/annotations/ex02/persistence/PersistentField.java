@@ -7,10 +7,9 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface PersistentField
-{
+public @interface PersistentField {
 
-  String columnName();
+	String columnName();
 
-  String columnType();
+	String columnType();
 }

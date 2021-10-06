@@ -18,45 +18,39 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPopupMenu;
 
-public class Demo09_ContextMenu
-{
-  public static void main(final String[] args)
-  {
+public class Demo09_ContextMenu {
+	public static void main(final String[] args) {
 
-    JFrame frame = new JFrame("Swing Test");
+		JFrame frame = new JFrame("Swing Test");
 
-    frame.setLayout(new BorderLayout());
+		frame.setLayout(new BorderLayout());
 
-    JButton button = new JButton("Rightclick to activate menu");
+		JButton button = new JButton("Rightclick to activate menu");
 
-    button.addActionListener(e -> System.out.println("Left click"));
+		button.addActionListener(e -> System.out.println("Left click"));
 
-    // *********************************************************************
-    // * Her opretter og tilføjer vi en popup-menu til knappen
-    // *********************************************************************
-    JPopupMenu popupMenu = new JPopupMenu("Menu");
-    popupMenu.add(new AbstractAction("Action 1")
-    {
-      @Override
-      public void actionPerformed(final ActionEvent e)
-      {
-        System.out.println("Action 1");
-      }
-    });
-    popupMenu.add(new AbstractAction("Action 2")
-    {
+		// *********************************************************************
+		// * Her opretter og tilføjer vi en popup-menu til knappen
+		// *********************************************************************
+		JPopupMenu popupMenu = new JPopupMenu("Menu");
+		popupMenu.add(new AbstractAction("Action 1") {
+			@Override
+			public void actionPerformed(final ActionEvent e) {
+				System.out.println("Action 1");
+			}
+		});
+		popupMenu.add(new AbstractAction("Action 2") {
 
-      @Override
-      public void actionPerformed(final ActionEvent e)
-      {
-        System.out.println("Action 2");
-      }
-    });
-    button.setComponentPopupMenu(popupMenu);
+			@Override
+			public void actionPerformed(final ActionEvent e) {
+				System.out.println("Action 2");
+			}
+		});
+		button.setComponentPopupMenu(popupMenu);
 
-    frame.add(button);
-    frame.pack();
-    frame.setVisible(true);
+		frame.add(button);
+		frame.pack();
+		frame.setVisible(true);
 
-  }
+	}
 }

@@ -9,27 +9,22 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-public class PropertiesTestEx06
-{
-  public static void main(String[] args)
-  {
-    Properties myProps = new Properties();
+public class PropertiesTestEx06 {
+	public static void main(String[] args) {
+		Properties myProps = new Properties();
 
-    myProps.setProperty("username", "SYSDBA");
-    myProps.setProperty("password", "MASTERKEY");
+		myProps.setProperty("username", "SYSDBA");
+		myProps.setProperty("password", "MASTERKEY");
 
-    File file = new File("saved.properties");
+		File file = new File("saved.properties");
 
-    // Gem properties i fil
-    try (FileOutputStream outputStream = new FileOutputStream(file);)
-    {
-      String titleComments = "Password properties";
-      myProps.store(outputStream, titleComments);
-    }
-    catch (IOException e)
-    {
-      String msg = "Couldn't write file 'saved.properties'";
-      throw new RuntimeException(msg);
-    }
-  }
+		// Gem properties i fil
+		try (FileOutputStream outputStream = new FileOutputStream(file);) {
+			String titleComments = "Password properties";
+			myProps.store(outputStream, titleComments);
+		} catch (IOException e) {
+			String msg = "Couldn't write file 'saved.properties'";
+			throw new RuntimeException(msg);
+		}
+	}
 }

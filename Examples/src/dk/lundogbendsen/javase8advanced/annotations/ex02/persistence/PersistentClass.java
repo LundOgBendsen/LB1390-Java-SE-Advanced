@@ -7,10 +7,9 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-public @interface PersistentClass
-{
+public @interface PersistentClass {
 
-  String table();
+	String table();
 
-  String primaryKey();
+	String primaryKey();
 }

@@ -14,43 +14,40 @@ import javax.swing.JFrame;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
 
-public class Demo08_ControllingLookAndFeel
-{
+public class Demo08_ControllingLookAndFeel {
 
-  public static void main(final String[] args) throws Exception
-  {
+	public static void main(final String[] args) throws Exception {
 
-    // FÅ JAVA TIL AT BRUGE DET GAMLE UDSEENDE PÅ METAL
-    // System.setProperty("swing.metalTheme", "steel");
+		// FÅ JAVA TIL AT BRUGE DET GAMLE UDSEENDE PÅ METAL
+		// System.setProperty("swing.metalTheme", "steel");
 
-    // BRUG *JAVAS* DEAFULT LOOK AND FEEL (ER DEFAULT DET VALGTE)
-    // UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
+		// BRUG *JAVAS* DEAFULT LOOK AND FEEL (ER DEFAULT DET VALGTE)
+		// UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
 
-    // BRUG *OPERATIVSYSTEMETS* DEFAULT LOOK AND FEEL (FX WINDOWS XP)
-    // UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		// BRUG *OPERATIVSYSTEMETS* DEFAULT LOOK AND FEEL (FX WINDOWS XP)
+		// UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 
-    // Udskriv klassenavnet på alle installerede Look and feels
-    LookAndFeelInfo[] lafs = UIManager.getInstalledLookAndFeels();
-    for (LookAndFeelInfo laf : lafs)
-    {
-      System.out.println(laf.getClassName());
-    }
+		// Udskriv klassenavnet på alle installerede Look and feels
+		LookAndFeelInfo[] lafs = UIManager.getInstalledLookAndFeels();
+		for (LookAndFeelInfo laf : lafs) {
+			System.out.println(laf.getClassName());
+		}
 
-    // ANGIV NAVN PÅ DET LAF, DER SKAL BRUGES (brug fully qualified class name)
-    // UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
-    // UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsClassicLookAndFeel");
+		// ANGIV NAVN PÅ DET LAF, DER SKAL BRUGES (brug fully qualified class name)
+		// UIManager.setLookAndFeel("com.sun.java.swing.plaf.motif.MotifLookAndFeel");
+		// UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsClassicLookAndFeel");
 
-    JFrame frame = new JFrame("Swing Test");
+		JFrame frame = new JFrame("Swing Test");
 
-    frame.setLayout(new BorderLayout()); // NB: Uden getContentPane() !!
+		frame.setLayout(new BorderLayout()); // NB: Uden getContentPane() !!
 
-    JButton button = new JButton("Print hej");
+		JButton button = new JButton("Print hej");
 
-    button.addActionListener(e -> System.out.println("Hej"));
+		button.addActionListener(e -> System.out.println("Hej"));
 
-    frame.add(button); // NB: Uden getContentPane() !!
-    frame.pack();
-    frame.setVisible(true);
-  }
+		frame.add(button); // NB: Uden getContentPane() !!
+		frame.pack();
+		frame.setVisible(true);
+	}
 
 }

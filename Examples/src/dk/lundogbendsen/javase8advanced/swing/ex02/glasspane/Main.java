@@ -33,12 +33,12 @@ public class Main {
 
 			// kaldes af Swing, når komponenten skal tegne sig selv
 			@Override
-      protected void paintComponent(final Graphics g) {
+			protected void paintComponent(final Graphics g) {
 				g.setColor(Color.RED);
-        g.drawLine(0, 0, 200, 100);
-        g.drawLine(200, 100, 100, 100);
-        g.drawLine(100, 100, 75, 75);
-        g.drawLine(75, 75, 100, 50);
+				g.drawLine(0, 0, 200, 100);
+				g.drawLine(200, 100, 100, 100);
+				g.drawLine(100, 100, 75, 75);
+				g.drawLine(75, 75, 100, 50);
 			}
 		};
 		frame.setGlassPane(glassPane);

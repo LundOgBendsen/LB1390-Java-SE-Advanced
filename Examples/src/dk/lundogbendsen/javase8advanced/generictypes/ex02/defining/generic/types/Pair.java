@@ -1,35 +1,29 @@
 package dk.lundogbendsen.javase8advanced.generictypes.ex02.defining.generic.types;
 
-public class Pair<F, S>
-{
+public class Pair<F, S> {
 
-  F first;
+	F first;
 
-  S second;
+	S second;
 
-  public Pair(F f, S s)
-  {
-    first = f;
-    second = s;
-  }
+	public Pair(F f, S s) {
+		first = f;
+		second = s;
+	}
 
-  public void setFirst(F f)
-  {
-    first = f;
-  }
+	public void setFirst(F f) {
+		first = f;
+	}
 
-  public F getFirst()
-  {
-    return first;
-  }
+	public F getFirst() {
+		return first;
+	}
 
-  public void setSecond(S s)
-  {
-    second = s;
-  }
+	public void setSecond(S s) {
+		second = s;
+	}
 
-  public S getSecond()
-  {
-    return second;
-  }
+	public S getSecond() {
+		return second;
+	}
 }

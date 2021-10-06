@@ -12,11 +12,9 @@
  */
 package dk.lundogbendsen.javase8advanced.smallchangesinjava5.ex04.covariant.returns;
 
-public class Main
-{
-  public static void main(final String[] args)
-  {
-    RandomObjectGenerator gen = new RandomIntegerGenerator();
-    System.out.println(gen.generateRandomObject());
-  }
+public class Main {
+	public static void main(final String[] args) {
+		RandomObjectGenerator gen = new RandomIntegerGenerator();
+		System.out.println(gen.generateRandomObject());
+	}
 }

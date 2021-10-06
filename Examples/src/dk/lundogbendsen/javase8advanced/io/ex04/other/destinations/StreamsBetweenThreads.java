@@ -13,26 +13,23 @@ import java.io.IOException;
 import java.io.PipedInputStream;
 import java.io.PipedOutputStream;
 
-public class StreamsBetweenThreads
-{
+public class StreamsBetweenThreads {
 
-  // Prøv at ændre på disse værdier
-  static boolean startNumberReadingThread = false;
-  static boolean slowNumberReadingThread = false;
+	// Prøv at ændre på disse værdier
+	static boolean startNumberReadingThread = false;
+	static boolean slowNumberReadingThread = false;
 
-  public static void main(final String[] args) throws IOException
-  {
+	public static void main(final String[] args) throws IOException {
 
-    PipedOutputStream pos = new PipedOutputStream();
-    PipedInputStream pis = new PipedInputStream(pos);
+		PipedOutputStream pos = new PipedOutputStream();
+		PipedInputStream pis = new PipedInputStream(pos);
 
-    Thread t1 = new RandomNumberProducingThread(pos);
-    t1.start();
+		Thread t1 = new RandomNumberProducingThread(pos);
+		t1.start();
 
-    if (startNumberReadingThread)
-    {
-      Thread t2 = new NumberReadingThread(pis);
-      t2.start();
-    }
-  }
+		if (startNumberReadingThread) {
+			Thread t2 = new NumberReadingThread(pis);
+			t2.start();
+		}
+	}
 }
