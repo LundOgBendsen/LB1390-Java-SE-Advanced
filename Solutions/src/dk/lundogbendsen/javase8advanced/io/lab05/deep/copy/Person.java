@@ -4,7 +4,9 @@ import java.io.Serializable;
 
 class Person implements Serializable, Cloneable
 {
-  //make it cloneable
+	private static final long serialVersionUID = 1L;
+
+//make it cloneable
   @Override
   public Person clone() throws CloneNotSupportedException
   {

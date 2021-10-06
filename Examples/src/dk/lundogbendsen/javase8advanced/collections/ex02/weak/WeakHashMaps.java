@@ -11,14 +11,14 @@ import java.util.WeakHashMap;
 
 public class WeakHashMaps {
 	private static final int N = 100;
-	private static final int LUMP = 100000;
+	private static final int LUMP = 1000000;
 
 	public static void main(final String[] args) throws Exception {
 		Map<Integer, Object[]> weakHashMap = new WeakHashMap<>();
 		List<Integer> ids = new ArrayList<Integer>();
 
 		for (int i = 0; i < N; i++) {
-			Integer id = new Integer(i + 500);
+			Integer id = Integer.valueOf(i + 500);
 			weakHashMap.put(id, new Object[LUMP]);
 			ids.add(id);
 		}

@@ -29,24 +29,28 @@ public class Demo02_MenuBar {
 
 		// tilføj menupunkter til menuerne
 		menu1.add(new AbstractAction("menu_item_1") {
+			private static final long serialVersionUID = 1L;
 			@Override
 			public void actionPerformed(final ActionEvent e) {
 				System.out.println("menu_item_1");
 			}
 		});
 		menu1.add(new AbstractAction("menu_item_2") {
+			private static final long serialVersionUID = 1L;
 			@Override
 			public void actionPerformed(final ActionEvent e) {
 				System.out.println("menu_item_2");
 			}
 		});
 		menu2.add(new AbstractAction("menu_item_3") {
+			private static final long serialVersionUID = 1L;
 			@Override
 			public void actionPerformed(final ActionEvent e) {
 				System.out.println("menu_item_3");
 			}
 		});
 		menu2.add(new AbstractAction("menu_item_4") {
+			private static final long serialVersionUID = 1L;
 			@Override
 			public void actionPerformed(final ActionEvent e) {
 				System.out.println("menu_item_4");
@@ -59,12 +63,14 @@ public class Demo02_MenuBar {
 
 		// tilføj menupunkter til submenuen
 		menu3.add(new AbstractAction("menu_item_5") {
+			private static final long serialVersionUID = 1L;
 			@Override
 			public void actionPerformed(final ActionEvent e) {
 				System.out.println("menu_item_5");
 			}
 		});
 		menu3.add(new AbstractAction("menu_item_6") {
+			private static final long serialVersionUID = 1L;
 			@Override
 			public void actionPerformed(final ActionEvent e) {
 				System.out.println("menu_item_6");

@@ -34,13 +34,14 @@ public class Demo09_ContextMenu {
 		// *********************************************************************
 		JPopupMenu popupMenu = new JPopupMenu("Menu");
 		popupMenu.add(new AbstractAction("Action 1") {
+			private static final long serialVersionUID = 1L;
 			@Override
 			public void actionPerformed(final ActionEvent e) {
 				System.out.println("Action 1");
 			}
 		});
 		popupMenu.add(new AbstractAction("Action 2") {
-
+			private static final long serialVersionUID = 1L;
 			@Override
 			public void actionPerformed(final ActionEvent e) {
 				System.out.println("Action 2");

@@ -53,6 +53,7 @@ import javax.swing.tree.TreeModel;
 import javax.swing.tree.TreeNode;
 import javax.swing.tree.TreePath;
 
+@SuppressWarnings("deprecation")
 public class ThreadUtil
 {
   static private boolean investigatorIsShowing = false;
@@ -365,6 +366,7 @@ class Investigator
   }
 }
 
+@SuppressWarnings("deprecation")
 class Model extends Observable
 {
   // Implements Model as Singleton (design pattern)
@@ -513,7 +515,8 @@ class Snapshot
     return tableModel;
   }
 
-  private TableModel createThreadGroupInfoTableModel()
+  @SuppressWarnings("removal")
+private TableModel createThreadGroupInfoTableModel()
   {
     String[] tableTitles = new String[] { "ThreadGroups", "max priority", "is daemon", };
     ThreadGroup[] currentGroups = ThreadUtil.getCurrentThreadGroups();
@@ -723,7 +726,8 @@ class ThreadNode implements TreeNode
 
 class CreatorIsDeadException extends Exception
 {
-  CreatorIsDeadException(final String s)
+	private static final long serialVersionUID = 1L;
+ CreatorIsDeadException(final String s)
   {
     super(s);
   }
@@ -734,6 +738,7 @@ class CreatorIsDeadException extends Exception
   }
 }
 
+@SuppressWarnings("deprecation")
 class View implements Observer
 {
 
@@ -760,7 +765,7 @@ class View implements Observer
     return theView;
   }
 
-  private View()
+private View()
   {
     // register this as listener on model
     model.addObserver(this);
@@ -880,6 +885,7 @@ class View implements Observer
 
 class SnapshotListModel extends AbstractListModel<Object>
 {
+	private static final long serialVersionUID = 1L;
   private Model model = Model.getModel();
 
   @Override

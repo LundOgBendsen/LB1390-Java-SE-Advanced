@@ -37,6 +37,8 @@ public class AllPersonsView extends View {
 
 	private AbstractTableModel createTableModel() {
 		return new AbstractTableModel() {
+			private static final long serialVersionUID = 1L;
+
 			@Override
 			public int getColumnCount() {
 				return 3;

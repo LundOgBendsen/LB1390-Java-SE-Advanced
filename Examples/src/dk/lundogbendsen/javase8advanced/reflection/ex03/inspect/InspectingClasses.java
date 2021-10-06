@@ -2,6 +2,7 @@ package dk.lundogbendsen.javase8advanced.reflection.ex03.inspect;
 
 public class InspectingClasses {
 
+	@SuppressWarnings("deprecation")
 	public static void main(final String[] args) {
 		try {
 			////////////////////////////////////////////////////

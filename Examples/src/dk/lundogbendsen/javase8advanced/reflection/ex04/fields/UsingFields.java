@@ -101,7 +101,7 @@ public class UsingFields {
 		aField.setAccessible(true);
 
 		// an int field can be set using int-wrapper java.lang.Integer:
-		Integer integer = new Integer(1000);
+		Integer integer = Integer.valueOf(1000);
 		aField.set(object, integer);
 		System.out.println(object); // a = 1000
 

@@ -17,6 +17,7 @@ import javax.swing.JPanel;
 // - Være en subtype af JComponent (og det er JPanel)
 @SuppressWarnings("unused")
 public class MyLabel extends JPanel implements Serializable {
+	private static final long serialVersionUID = 1L;
 	private String text;
 
 	private int fontSize;

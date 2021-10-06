@@ -17,7 +17,7 @@ public class Main01 {
 
 		words.add("Hej"); // OK
 		// Ulovligt - fanges af kompileren
-		// words.add(new Integer(12));
+		// words.add(Integer.valueOf(12));
 
 		// Vi mister kompilerchecket på, at der kun puttes Strings i vores
 		// ArrayList, når vi bruger ArrayList som en raw type
@@ -30,7 +30,8 @@ public class Main01 {
 		System.out.println(word1);
 	}
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static void oldMethod(final List list) {
-		list.add(new Integer(12)); // her er der ingen problemer!!!
+		list.add(Integer.valueOf(12)); // her er der ingen problemer!!!
 	}
 }

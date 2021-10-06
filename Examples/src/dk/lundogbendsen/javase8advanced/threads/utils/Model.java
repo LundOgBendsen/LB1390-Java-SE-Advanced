@@ -3,6 +3,7 @@ package dk.lundogbendsen.javase8advanced.threads.utils;
 import java.util.ArrayList;
 import java.util.Observable;
 
+@SuppressWarnings("deprecation")
 public class Model extends Observable {
 	// Implements Model as Singleton (design pattern)
 	private static Model theModel;

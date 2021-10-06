@@ -17,6 +17,7 @@ public class LoadAndInstantiate {
 		tryLoading(packageName + ".NonExistingClass");
 	}
 
+	@SuppressWarnings("deprecation")
 	private static void tryLoading(final String name)
 			throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		Class<?> loadedClass = Class.forName(name);

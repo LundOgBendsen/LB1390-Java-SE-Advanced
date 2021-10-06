@@ -16,9 +16,9 @@ public class Main {
 	public static void main(final String[] args) {
 
 		int int01 = 12;
-		Integer integer01 = int01; // auto-boxing - fremfor new Integer(int01)
+		Integer integer01 = int01; // auto-boxing - fremfor Integer.valueOf(int01)
 
-		Integer integer02 = new Integer(5);
+		Integer integer02 = Integer.valueOf(5);
 		int int02 = integer02; // auto-unboxing - fremfor integer02.intValue()
 
 		int int03 = integer01 + integer02; // auto-unboxing
@@ -36,8 +36,8 @@ public class Main {
 			System.out.println(current);
 		}
 
-		Integer i1 = new Integer(1);
-		Integer i2 = new Integer(1);
+		Integer i1 = Integer.valueOf(1);
+		Integer i2 = Integer.valueOf(1);
 		int int1 = 1;
 		int int2 = 1;
 		System.out.println(i1 == i2);

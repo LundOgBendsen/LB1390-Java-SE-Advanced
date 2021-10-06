@@ -11,6 +11,7 @@ import java.util.List;
 
 @SuppressWarnings("unchecked")
 class Person implements Serializable {
+	private static final long serialVersionUID = 1L;
 
 	private String fullName;
 
@@ -70,7 +71,7 @@ class Person implements Serializable {
 		addPerson(this);
 	}
 
-	public static boolean isValidPerson(final String fullName, @SuppressWarnings("unused") final int birthYear) {
+	public static boolean isValidPerson(final String fullName, final int birthYear) {
 		if (fullName == null) {
 			return false;
 		} else if (fullName.equals("")) {

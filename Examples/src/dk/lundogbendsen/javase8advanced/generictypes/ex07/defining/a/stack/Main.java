@@ -4,8 +4,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		Stack<Integer> numberStack = new StackImpl<Integer>();
-		numberStack.push(new Integer(4));
-		numberStack.push(new Integer(98));
+		numberStack.push(Integer.valueOf(4));
+		numberStack.push(Integer.valueOf(98));
 		numberStack.push(456); // Og vi kan endda bruge autoboxing
 
 		// Men... det her går ikke

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Main {
 
-	@SuppressWarnings("unused")
+	@SuppressWarnings({ "unused", "rawtypes", "unchecked" })
 	public static void main(final String[] args) {
 
 		ArrayList<Object> objects = null;

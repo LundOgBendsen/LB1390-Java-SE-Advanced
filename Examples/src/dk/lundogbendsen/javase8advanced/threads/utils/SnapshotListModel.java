@@ -3,6 +3,7 @@ package dk.lundogbendsen.javase8advanced.threads.utils;
 import javax.swing.AbstractListModel;
 
 public class SnapshotListModel extends AbstractListModel<String> {
+	private static final long serialVersionUID = 1L;
 	private Model model = Model.getModel();
 
 	@Override

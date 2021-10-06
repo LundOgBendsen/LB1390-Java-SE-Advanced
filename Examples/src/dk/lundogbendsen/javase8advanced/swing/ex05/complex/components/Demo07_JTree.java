@@ -86,6 +86,7 @@ public class Demo07_JTree {
 }
 
 class FileTreeNode extends DefaultMutableTreeNode {
+	private static final long serialVersionUID = 1L;
 
 	// Hver instans er en visuel repræsentation af en fil. Da den visuelle
 	// repræsentation af filen af og skal vide noget om filen (fx dens navn), er

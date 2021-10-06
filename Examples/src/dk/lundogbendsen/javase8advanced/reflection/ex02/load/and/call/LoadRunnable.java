@@ -12,6 +12,7 @@ public class LoadRunnable {
 		tryRunning("dk.lundogbendsen.javase8advanced.reflection.ex02.load.and.call.RunnableThree");
 	}
 
+	@SuppressWarnings("deprecation")
 	private static void tryRunning(final String name)
 			throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		Class<?> loadedClass = Class.forName(name);

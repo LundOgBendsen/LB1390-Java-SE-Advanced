@@ -19,6 +19,7 @@ import javax.swing.tree.TreeModel;
 import javax.swing.tree.TreeNode;
 import javax.swing.tree.TreePath;
 
+@SuppressWarnings("deprecation")
 public class View implements Observer {
 
 	private Model model = Model.getModel();

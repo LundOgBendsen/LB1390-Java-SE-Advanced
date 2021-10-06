@@ -212,7 +212,7 @@ public class Person implements Comparable<Person>, Cloneable {
 		List<Person> col = new ArrayList<>();
 		for (int i = 0; i < 10; i++) {
 			p = getRandom();
-			map.put(new Integer(p.getId()), p);
+			map.put(Integer.valueOf(p.getId()), p);
 			col.add(p);
 		}
 		pl();

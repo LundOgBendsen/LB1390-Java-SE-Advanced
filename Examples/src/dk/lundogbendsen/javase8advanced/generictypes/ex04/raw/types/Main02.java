@@ -10,12 +10,13 @@ import java.util.Vector;
 
 public class Main02 {
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static void main(String[] args) {
 		Vector<String> words = new Vector<String>();
 
 		words.add("Hej"); // OK
 		// Ulovligt - fanges af kompileren
-		// words.add(new Integer(12));
+		// words.add(Integer.valueOf(12));
 
 		// Vi mister kompilerchecket på, at der kun puttes Strings i vores
 		// Vector, når vi bruger Vector som en raw type. Derfor wrapper vi
@@ -33,6 +34,6 @@ public class Main02 {
 	}
 
 	public static void oldMethod(List<Object> list) {
-		list.add(new Integer(12)); // her får vi ClassCastException
+		list.add(Integer.valueOf(12)); // her får vi ClassCastException
 	}
 }

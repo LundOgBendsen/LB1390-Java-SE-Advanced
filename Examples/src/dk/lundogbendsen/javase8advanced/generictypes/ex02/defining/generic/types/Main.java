@@ -4,14 +4,14 @@ package dk.lundogbendsen.javase8advanced.generictypes.ex02.defining.generic.type
 public class Main {
 	public static void main(String[] args) {
 
-		Number n1 = new Integer(5);
+		Number n1 = Integer.valueOf(5);
 		String s1 = new String("Goddag");
 
 		// Virker fordi vi overholder typerne på vores Pair-instans
 		Pair<Number, String> p1 = new Pair<Number, String>(n1, s1);
 
 		// Også lovligt, fordi vi igen overholder typerne på vores Pair-instans
-		p1.setFirst(new Long(6L));
+		p1.setFirst(Long.valueOf(6L));
 		p1.setSecond(new String("Hello"));
 
 		// Ikke lovligt, da vi bryder med de typeparametre, som vi har angivet:

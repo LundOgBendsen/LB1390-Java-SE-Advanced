@@ -15,7 +15,7 @@ public class Main05 {
 
 	static void insertSomeObjects(Collection<?> c) {
 		// Ikke tiladt, da vi ikke ved om c tillader indsættelse af Integers
-		// c.add(new Integer(12));
+		// c.add(Integer.valueOf(12));
 
 		c.add(null);
 	}
@@ -31,9 +31,9 @@ public class Main05 {
 		Object o = list.get(0);
 
 		// Tilladt, da vi ved at list må indeholde Integer-objekter
-		list.add(new Integer(12));
+		list.add(Integer.valueOf(12));
 
-		Number n = new Integer(12);
+		Number n = Integer.valueOf(12);
 		// Ikke tilladt, da list fx kunne være en List<Integer>
 		// list.add(n);
 	}

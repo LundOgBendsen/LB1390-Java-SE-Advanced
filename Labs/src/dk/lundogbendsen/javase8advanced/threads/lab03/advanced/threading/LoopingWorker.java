@@ -8,14 +8,6 @@ public class LoopingWorker
 
   }
 
-  private void executeJob() throws Exception
-  {
-  }
-
-  private void handleException(final Throwable e)
-  {
-  }
-
   public void stopAsap() throws InterruptedException
   {
   }
@@ -25,10 +17,6 @@ public class LoopingWorker
   }
 
   public void reactivate()
-  {
-  }
-
-  private void waitIfDeactivated()
   {
   }
 }

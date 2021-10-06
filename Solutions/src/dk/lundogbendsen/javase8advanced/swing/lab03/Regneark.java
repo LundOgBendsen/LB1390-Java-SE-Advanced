@@ -28,6 +28,7 @@ public class Regneark
 
   static class RegneArkModel extends AbstractTableModel
   {
+		private static final long serialVersionUID = 1L;
     private String[][] fields = new String[4][4];
 
     public RegneArkModel()

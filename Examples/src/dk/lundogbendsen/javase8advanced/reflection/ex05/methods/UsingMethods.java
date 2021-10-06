@@ -48,7 +48,7 @@ public class UsingMethods {
 		Calculator calculator = new Calculator();
 
 		// create params matching add(int, int)
-		Object[] twoIntValues = new Object[] { new Integer(12), new Integer(3) };
+		Object[] twoIntValues = new Object[] { Integer.valueOf(12), Integer.valueOf(3) };
 
 		// invoke add(int, int)
 		Object result = addIntsMethod.invoke(calculator, twoIntValues);

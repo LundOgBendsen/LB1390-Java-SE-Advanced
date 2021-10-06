@@ -39,6 +39,7 @@ public class Demo06a_JTable {
 	}
 
 	private static class MyTableModel extends AbstractTableModel {
+		private static final long serialVersionUID = 1L;
 		private String[][] cells;
 
 		private static Random r = new Random();

@@ -67,12 +67,14 @@ public class MainView extends View {
 	private JMenu createFileMenu() {
 		JMenu fileMenu = new JMenu("File");
 		fileMenu.add(new AbstractAction("New register") {
+			private static final long serialVersionUID = 1L;
 			@Override
 			public void actionPerformed(final ActionEvent ae) {
 				getModel().clear();
 			}
 		});
 		fileMenu.add(new AbstractAction("Load register ...") {
+			private static final long serialVersionUID = 1L;
 			@Override
 			public void actionPerformed(final ActionEvent ae) {
 				File userChoise = showLoadFileChooser();
@@ -85,6 +87,7 @@ public class MainView extends View {
 			}
 		});
 		fileMenu.add(new AbstractAction("Save register as ...") {
+			private static final long serialVersionUID = 1L;
 			@Override
 			public void actionPerformed(final ActionEvent ae) {
 				File userChoise = showSaveFileChooser();
@@ -97,6 +100,7 @@ public class MainView extends View {
 			}
 		});
 		fileMenu.add(new AbstractAction("Exit program") {
+			private static final long serialVersionUID = 1L;
 			@Override
 			public void actionPerformed(final ActionEvent ae) {
 				System.exit(0);
@@ -108,12 +112,14 @@ public class MainView extends View {
 	private JMenu createPersonsMenu() {
 		JMenu personsMenu = new JMenu("Persons");
 		personsMenu.add(new AbstractAction("Show all persons") {
+			private static final long serialVersionUID = 1L;
 			@Override
 			public void actionPerformed(final ActionEvent ae) {
 				new AllPersonsView(desktopPane);
 			}
 		});
 		personsMenu.add(new AbstractAction("Create new person") {
+			private static final long serialVersionUID = 1L;
 			@Override
 			public void actionPerformed(final ActionEvent ae) {
 				new CreatePersonView(desktopPane);

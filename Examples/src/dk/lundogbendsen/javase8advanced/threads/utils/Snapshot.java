@@ -86,6 +86,7 @@ public class Snapshot {
 		return tableModel;
 	}
 
+	@SuppressWarnings("removal")
 	private TableModel createThreadGroupInfoTableModel() {
 		String[] tableTitles = new String[] { "ThreadGroups", "max priority", "is daemon", };
 		ThreadGroup[] currentGroups = ThreadUtil.getCurrentThreadGroups();
