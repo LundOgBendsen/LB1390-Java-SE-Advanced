@@ -1,9 +1,7 @@
 package dk.lundogbendsen.javase8advanced.io.lab01.savingpersons;
 
-public class TestPerson
-{
-  public static void main(final String[] args) throws Exception
-  {
+public class TestPerson {
+	public static void main(final String[] args) throws Exception {
 //    Person p1 = new Person("Hans Jensen", 1968, 1.84);
 //    System.out.println("Lavet Person p1 = " + p1);
 //    System.out.println();
@@ -36,5 +34,5 @@ public class TestPerson
 //    System.out.println("Person p5 = " + p5);
 //    System.out.println();
 
-  }
+	}
 }

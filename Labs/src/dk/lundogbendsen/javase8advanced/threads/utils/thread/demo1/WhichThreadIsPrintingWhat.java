@@ -18,34 +18,30 @@ package dk.lundogbendsen.javase8advanced.threads.utils.thread.demo1;
 
 import dk.lundogbendsen.javase8advanced.threads.utils.thread.ThreadUtil;
 
-public class WhichThreadIsPrintingWhat
-{
-  public static void main(final String[] args)
-  {
+public class WhichThreadIsPrintingWhat {
+	public static void main(final String[] args) {
 
-    // Metodekaldet ændrer System.out og System.err, så de altid starter
-    // med at udskrive navnet på den tråd, der kaldte print eller println.
-    ThreadUtil.printThreadNames();
+		// Metodekaldet ændrer System.out og System.err, så de altid starter
+		// med at udskrive navnet på den tråd, der kaldte print eller println.
+		ThreadUtil.printThreadNames();
 
-    String msg = "We are in line 29 in the Threads04.main( )-method.";
-    System.out.println(msg);
-    System.out.println("Let us see which thread is running these lines...");
-    System.out.println(Thread.currentThread().getName());
+		String msg = "We are in line 29 in the Threads04.main( )-method.";
+		System.out.println(msg);
+		System.out.println("Let us see which thread is running these lines...");
+		System.out.println(Thread.currentThread().getName());
 
-    MyThread thread = new MyThread();
-    thread.setName("MyVeryOwnThread");
-    thread.start();
-  }
+		MyThread thread = new MyThread();
+		thread.setName("MyVeryOwnThread");
+		thread.start();
+	}
 }
 
-class MyThread extends Thread
-{
-  @Override
-  public void run()
-  {
-    String msg = "We are in line 42 in the MyThread.run( )-method.";
-    System.out.println(msg);
-    System.out.println("Let us see which thread is running these lines...");
-    System.out.println(Thread.currentThread().getName());
-  }
+class MyThread extends Thread {
+	@Override
+	public void run() {
+		String msg = "We are in line 42 in the MyThread.run( )-method.";
+		System.out.println(msg);
+		System.out.println("Let us see which thread is running these lines...");
+		System.out.println(Thread.currentThread().getName());
+	}
 }
