@@ -1,2 +1,0 @@
-This file is only here to force the creation of the folder it in when checking out from Git.
-Not for any other use. Do not edit.
