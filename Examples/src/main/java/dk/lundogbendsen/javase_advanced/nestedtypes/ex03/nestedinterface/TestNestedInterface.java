@@ -12,7 +12,7 @@ public class TestNestedInterface {
 }
 
 class OuterClass {
-	// implecit static interfacet
+	// implicit static interface
 	interface MemberInterface {
 		void printMsg();
 	}

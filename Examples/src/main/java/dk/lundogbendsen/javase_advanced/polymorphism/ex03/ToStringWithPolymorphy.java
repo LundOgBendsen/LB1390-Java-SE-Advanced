@@ -19,7 +19,7 @@ public class ToStringWithPolymorphy {
 
 		System.out.println("\nOr manually: ");
 		for (Vehicle vehicle : a) {
-			System.out.println(vehicle);
+			System.out.println(vehicle.toString());
 		} 
 	}
 }

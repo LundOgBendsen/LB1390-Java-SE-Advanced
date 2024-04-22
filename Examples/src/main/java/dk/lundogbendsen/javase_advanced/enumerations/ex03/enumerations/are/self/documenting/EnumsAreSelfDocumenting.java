@@ -1,7 +1,7 @@
 package dk.lundogbendsen.javase_advanced.enumerations.ex03.enumerations.are.self.documenting;
 
 /**
- * Demonstrates that enums are much more self-documenting than booleans
+ * Demonstrates that enums are much more self-documenting than ints
  */
 public class EnumsAreSelfDocumenting {
 	/* if you want to make boolean descriptive, you have to define a constant anyway */
