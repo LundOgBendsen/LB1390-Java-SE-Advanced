@@ -1,5 +1,6 @@
 package dk.lundogbendsen.javase_advanced.generictypes.ex04.raw.types;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Vector;
@@ -8,7 +9,7 @@ public class Main02 {
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static void main(String[] args) {
-		Vector<String> words = new Vector<String>();
+		List words = new ArrayList();
 
 		words.add("Hi"); // OK
 		// NOT valid. Compiler will catch it
@@ -21,11 +22,8 @@ public class Main02 {
 
 		oldMethod(list); // Execution will stop after this statement
 
-		String word0 = words.get(0);
+		String word0 = (String) words.get(0);
 		System.out.println(word0);
-
-		String word1 = words.get(1);
-		System.out.println(word1);
 	}
 
 	public static void oldMethod(List<Object> list) {

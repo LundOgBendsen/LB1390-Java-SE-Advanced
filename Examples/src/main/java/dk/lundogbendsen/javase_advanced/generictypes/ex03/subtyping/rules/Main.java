@@ -11,7 +11,7 @@ public class Main {
 		ArrayList<String> strings = new ArrayList<String>();
 
 		// NOT valid. The declared side allows any object to be inserted.
-		// The instantiated List will only allow strings to be inserted, hence we we have a conflict!
+		// The instantiated List will only allow strings to be inserted, hence we will have a conflict!
 		// objects = strings;
 		// objects.add(Integer.valueOf(12));
 
