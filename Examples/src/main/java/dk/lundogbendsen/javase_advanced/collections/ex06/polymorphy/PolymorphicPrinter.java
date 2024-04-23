@@ -1,8 +1,8 @@
 package dk.lundogbendsen.javase_advanced.collections.ex06.polymorphy;
 
 /*
- * Viser hvordan man vha. Iterator og polymorfi, kan håndtere
- * både collections og 'wrappede' arrays og maps på samme måde.
+ * Shows how you can use Iterator and polymorphy to handle collections as well as 'wrapped‘ arrays
+ * and maps in the same fashion
  */
 import java.util.*;
 

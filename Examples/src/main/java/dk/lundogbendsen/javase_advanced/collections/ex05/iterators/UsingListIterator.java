@@ -1,7 +1,7 @@
 package dk.lundogbendsen.javase_advanced.collections.ex05.iterators;
 
 /*
- * Viser hvordan ListIterator-interfacet kan bruges
+ * Shows how the ListIterator interface can be used
  */
 import java.util.*;
 

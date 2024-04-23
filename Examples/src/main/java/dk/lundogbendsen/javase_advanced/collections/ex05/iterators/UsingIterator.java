@@ -1,7 +1,7 @@
 package dk.lundogbendsen.javase_advanced.collections.ex05.iterators;
 
 /*
- * Viser hvordan Iterator-interfacet kan bruges
+ * Shows how the Iterator interface can be used
  */
 import java.util.Collection;
 import java.util.Iterator;
